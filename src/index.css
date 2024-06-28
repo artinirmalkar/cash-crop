@@ -1,0 +1,969 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital@1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color-light: #ffffff;
+  --bg-color-dark: #18191b;
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: Nunito,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color-light); 
+  color: var(--text-color-light); 
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #243c5a;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #243c5a;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input:focus {
+  /* outline: 1px solid #2684ff; */
+  outline: 1px solid #0f3d64;
+  border: none;
+}
+.cardInput:focus {
+  /* outline: 1px solid #2684ff; */
+  outline: none;
+  border: none;
+}
+textarea:focus {
+  /* outline: 1px solid #2684ff; */
+  outline: 1px solid #0f3d64;
+  border: none; 
+}
+
+.error{
+  font-size: 12px ;
+  color: red;
+  font-weight: bold;
+}
+
+.register{
+  background: url('./assest/bg.png') no-repeat bottom;
+}
+.login{
+  background: url('./assest/register_login.png') no-repeat ;
+}
+
+.active{
+  font-weight: bold;
+  color: #0f3d64;
+  font-size: 14px;
+}
+
+.star{
+  color: #0f3d64;
+  font-weight:  bold;
+  font-size: 22px;
+}
+
+input{
+  background-color: transparent;
+}
+
+/* DataTable Modified CSS @start */
+
+  input.p-inputtext.p-component.p-inputtext.p-component {
+    padding-block: .4rem;
+    padding-left: 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    font-size: 0.875rem;
+  }
+
+  .p-dropdown-header{
+    background-color: yellow;
+  }
+
+  .p-calendar.p-invalid.p-component > .p-inputtext {
+    border-color: #ced4da #ced4da #ced4da #e4677e;
+  }
+
+  .p-calendar:not(.p-calendar-disabled).p-focus > .p-inputtext {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.1rem #f3f3f3;
+    padding-block: .4rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+  }
+
+  .p-datepicker {
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+  }
+
+  .p-datepicker:not(.p-datepicker-inline) {
+    background: #fff;
+    border: 0 none;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .p-datepicker .p-datepicker-header {
+    padding: 0.5rem;
+    font-weight: 600;
+    margin: 0;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+
+  .p-datepicker .p-datepicker-header .p-datepicker-prev,
+  .p-datepicker .p-datepicker-header .p-datepicker-next {
+    width: 2rem;
+    height: 2rem;    
+    border: 0 none;
+    background: transparent;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+
+  .p-datepicker .p-datepicker-header .p-datepicker-prev:enabled:hover,
+  .p-datepicker .p-datepicker-header .p-datepicker-next:enabled:hover {
+    border-color: transparent;
+  }
+
+  .p-datepicker .p-datepicker-header .p-datepicker-prev:focus-visible,
+  .p-datepicker .p-datepicker-header .p-datepicker-next:focus-visible {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #bfd1f6;
+  }
+
+  .p-datepicker .p-datepicker-header .p-datepicker-title {
+    line-height: 2rem;
+  }
+
+  .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year,
+  .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month {
+    color: var(--dark-color3);
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
+
+  .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year:enabled:hover,
+  .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month:enabled:hover {
+    color: #0f3d64;
+  }
+
+  .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month {
+    margin-right: 0.5rem;
+  }
+  
+  .p-datepicker table {
+    font-size:  0.875rem;
+    margin: 0.5rem 0;
+  }
+  .p-datepicker table th {
+    padding: 0.5rem;
+  }
+  .p-datepicker table th > span {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .p-datepicker table td {
+    padding: 0.5rem;
+  }
+  .p-datepicker table td > span {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+
+  }
+  .p-datepicker table td > span.p-highlight {
+    color: #fff;
+    background: #145388;
+  }
+  .p-datepicker table td > span:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #bfd1f6;
+  }
+  .p-datepicker table td.p-datepicker-today > span {
+    background: #145388;
+    color: #FFF;
+    border-color: transparent;
+  }
+  .p-datepicker table td.p-datepicker-today > span.p-highlight {
+    color: #fff;
+    background: #145388;
+  }
+  .p-datepicker .p-datepicker-buttonbar {
+    padding: 1rem 0;
+    border-top: 1px solid #dee2e6;
+  }
+  .p-datepicker .p-datepicker-buttonbar .p-button {
+    width: auto;
+  }
+  .p-datepicker .p-timepicker {
+    border-top: 1px solid #dee2e6;
+    padding: 0.5rem;
+  }
+  .p-datepicker .p-timepicker button {
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    border: 0 none;
+    background: transparent;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+  .p-datepicker .p-timepicker button:enabled:hover {
+    color: #FFF;
+    border-color: transparent;
+    background: #e9ecef;
+  }
+  .p-datepicker .p-timepicker button:focus-visible {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #bfd1f6;
+  }
+  .p-datepicker .p-timepicker button:last-child {
+    margin-top: 0.2em;
+  }
+  .p-datepicker .p-timepicker span {
+    font-size:  0.875rem;
+  }
+  .p-datepicker .p-timepicker > div {
+    padding: 0 0.429rem;
+  }
+  .p-datepicker.p-datepicker-timeonly .p-timepicker {
+    border-top: 0 none;
+  }
+  .p-datepicker .p-monthpicker {
+    margin: 0.5rem 0;
+  }
+  .p-datepicker .p-monthpicker .p-monthpicker-month {
+    padding: 0.5rem;
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 3px;
+  }
+  .p-datepicker .p-monthpicker .p-monthpicker-month.p-highlight {
+    color: #145388;
+    background: #2196F3;
+  }
+  .p-datepicker .p-yearpicker {
+    margin: 0.5rem 0;
+  }
+  .p-datepicker .p-yearpicker .p-yearpicker-year {
+    padding: 0.5rem;
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 3px;
+  }
+  .p-datepicker .p-yearpicker .p-yearpicker-year.p-highlight {
+    color: #145388;
+    background: #2196F3;
+  }
+  .p-datepicker.p-datepicker-multiple-month .p-datepicker-group {
+    border-left: 1px solid #dee2e6;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .p-datepicker.p-datepicker-multiple-month .p-datepicker-group:first-child {
+    padding-left: 0;
+    border-left: 0 none;
+  }
+  .p-datepicker.p-datepicker-multiple-month .p-datepicker-group:last-child {
+    padding-right: 0;
+  }
+  .p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover {
+    background: #e9ecef;
+  }
+  .p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #bfd1f6;
+  }
+  .p-datepicker:not(.p-disabled) .p-monthpicker .p-monthpicker-month:not(.p-disabled):not(.p-highlight):hover {
+    background: #e9ecef;
+  }
+  .p-datepicker:not(.p-disabled) .p-monthpicker .p-monthpicker-month:not(.p-disabled):focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #bfd1f6;
+  }
+  .p-datepicker:not(.p-disabled) .p-yearpicker .p-yearpicker-year:not(.p-disabled):not(.p-highlight):hover {
+    background: #e9ecef;
+  }
+  .p-datepicker:not(.p-disabled) .p-yearpicker .p-yearpicker-year:not(.p-disabled):focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #bfd1f6;
+  }
+  @media screen and (max-width: 769px) {
+    .p-datepicker table th,
+    .p-datepicker table td {
+      padding: 0;
+    }
+  }
+/* DataTable Modified CSS @end */
+
+
+
+/* dataTable css @start */
+.p-datatable .p-paginator-top {
+  border-width: 1px 0 1px 0;
+  border-radius: 0;
+}
+.p-datatable .p-paginator-bottom {
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+}
+.p-datatable .p-datatable-header {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #e9ecef;
+  border-width: 0 0 1px 0;
+  padding: 1rem 1rem;
+  font-weight: 600;
+}
+.p-datatable .p-datatable-footer {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #e9ecef;
+  border-width: 0 0 1px 0;
+  padding: 1rem 1rem;
+  font-weight: 600;
+}
+.p-datatable .p-datatable-thead > tr > th {
+  text-align: left;
+  padding: 1rem 1rem;
+  border: #313131;    
+  border-width: 0 0 1px 0;
+  font-weight: 600;
+  background:#f3f3f3;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.p-datatable .p-datatable-tfoot > tr > td {
+  text-align: left;
+  padding: 1rem 1rem;
+  border: 1px solid #e9ecef;
+  border-width: 0 0 1px 0;
+  font-weight: 600;
+  color: #495057;
+  background: #f8f9fa;
+}
+.p-datatable .p-sortable-column .p-sortable-column-icon {
+  color: #6c757d;
+  margin-left: 0.5rem;
+}
+.p-datatable .p-sortable-column .p-sortable-column-badge {
+  border-radius: 50%;
+  height: 1.143rem;
+  min-width: 1.143rem;
+  line-height: 1.143rem;
+  color:inherit;
+  background: #145388;
+  margin-left: 0.5rem;
+}
+.p-datatable .p-sortable-column:not(.p-highlight):not(.p-sortable-disabled):hover {
+  background: #e9ecef;
+  color: #495057;
+}
+.p-datatable .p-sortable-column:not(.p-highlight):not(.p-sortable-disabled):hover .p-sortable-column-icon {
+  color: #6c757d;
+}
+.p-datatable .p-sortable-column.p-highlight {
+  background: #f8f9fa;
+  color: #145388;
+}
+.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+  color: #145388;
+}
+.p-datatable .p-sortable-column.p-highlight:not(.p-sortable-disabled):hover {
+  background: #e9ecef;
+  color: #145388;
+}
+.p-datatable .p-sortable-column.p-highlight:not(.p-sortable-disabled):hover .p-sortable-column-icon {
+  color: #145388;
+}
+.p-datatable .p-sortable-column:focus-visible {
+  box-shadow: inset 0 0 0 0.15rem #bfd1f6;
+  outline: 0 none;
+}
+
+.p-datatable .p-datatable-tbody > tr  {
+  /* background: #ffffff; */
+  background: inherit;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  font-weight: bold;
+}
+.p-datatable .p-datatable-tbody > tr:hover {
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.p-datatable .p-datatable-tbody > tr > td {
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-width: 0 0 1px 0;
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+.p-datatable .p-datatable-tbody > tr > td .p-row-toggler,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-init,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-save,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-cancel {
+  width: 2rem;
+  height: 2rem;
+  color: #6c757d;
+  border: 0 none;
+  background: transparent;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-init:enabled:hover,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-save:enabled:hover,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-cancel:enabled:hover {
+  color: #495057;
+  border-color: transparent;
+  background: #e9ecef;
+}
+.p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-init:focus-visible,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-save:focus-visible,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-cancel:focus-visible {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #bfd1f6;
+}
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-save {
+  margin-right: 0.5rem;
+}
+.p-datatable .p-datatable-tbody > tr > td > .p-column-title {
+  font-weight: 600;
+}
+.p-datatable .p-datatable-tbody > tr > td.p-highlight {
+  background: #145388;
+  /* color: #ffffff; */
+  color:inherit;
+}
+.p-datatable .p-datatable-tbody > tr.p-highlight {
+  background: #145388;
+  /* color: #ffffff; */
+  color:inherit;
+}
+.p-datatable .p-datatable-tbody > tr.p-highlight-contextmenu {
+  outline: 0.15rem solid #bfd1f6;
+  outline-offset: -0.15rem;
+}
+.p-datatable .p-datatable-tbody > tr.p-datatable-dragpoint-top > td {
+  box-shadow: inset 0 2px 0 0 #145388;
+}
+.p-datatable .p-datatable-tbody > tr.p-datatable-dragpoint-bottom > td {
+  box-shadow: inset 0 -2px 0 0 #145388;
+}
+.p-datatable.p-datatable-selectable .p-datatable-tbody > tr.p-selectable-row:not(.p-highlight):not(.p-datatable-emptymessage):hover {
+  background: #e9ecef;
+  color: #495057;
+}
+.p-datatable.p-datatable-selectable .p-datatable-tbody > tr.p-selectable-row:focus-visible {
+  outline: 0.15rem solid #bfd1f6;
+  outline-offset: -0.15rem;
+}
+.p-datatable.p-datatable-selectable-cell .p-datatable-tbody > tr.p-selectable-row > td.p-selectable-cell:not(.p-highlight):hover {
+  background: #e9ecef;
+  color: #495057;
+}
+.p-datatable.p-datatable-selectable-cell .p-datatable-tbody > tr.p-selectable-row > td.p-selectable-cell:focus-visible {
+  outline: 0.15rem solid #bfd1f6;
+  outline-offset: -0.15rem;
+}
+.p-datatable.p-datatable-hoverable-rows .p-datatable-tbody > tr:not(.p-highlight):not(.p-datatable-emptymessage):hover {
+  background: #e9ecef;
+  color: #495057;
+}
+.p-datatable .p-column-resizer-helper {
+  background: #145388;
+}
+.p-datatable .p-datatable-scrollable-header,
+.p-datatable .p-datatable-scrollable-footer {
+  background: #f8f9fa;
+}
+.p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table > .p-datatable-thead,
+.p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table > .p-datatable-tfoot, .p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-virtualscroller > .p-datatable-table > .p-datatable-thead,
+.p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-virtualscroller > .p-datatable-table > .p-datatable-tfoot {
+  background-color: #f8f9fa;
+}
+.p-datatable .p-datatable-loading-icon {
+  font-size:  0.875rem;
+}
+.p-datatable .p-datatable-loading-icon.p-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-header {
+  border-width: 1px 1px 0 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-footer {
+  border-width: 0 1px 1px 1px;
+}
+.p-datatable.p-datatable-gridlines .p-paginator-top {
+  border-width: 0 1px 0 1px;
+}
+.p-datatable.p-datatable-gridlines .p-paginator-bottom {
+  border-width: 0 1px 1px 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th {
+  border-width: 1px 0 1px 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th:last-child {
+  border-width: 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-tbody > tr > td {
+  border-width: 1px 0 0 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-tbody > tr > td:last-child {
+  border-width: 1px 1px 0 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-tbody > tr:last-child > td {
+  border-width: 1px 0 1px 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-tbody > tr:last-child > td:last-child {
+  border-width: 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-tfoot > tr > td {
+  border-width: 1px 0 1px 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-tfoot > tr > td:last-child {
+  border-width: 1px 1px 1px 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-thead + .p-datatable-tfoot > tr > td {
+  border-width: 0 0 1px 1px;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-thead + .p-datatable-tfoot > tr > td:last-child {
+  border-width: 0 1px 1px 1px;
+}
+.p-datatable.p-datatable-gridlines:has(.p-datatable-thead):has(.p-datatable-tbody) .p-datatable-tbody > tr > td {
+  border-width: 0 0 1px 1px;
+}
+.p-datatable.p-datatable-gridlines:has(.p-datatable-thead):has(.p-datatable-tbody) .p-datatable-tbody > tr > td:last-child {
+  border-width: 0 1px 1px 1px;
+}
+.p-datatable.p-datatable-gridlines:has(.p-datatable-tbody):has(.p-datatable-tfoot) .p-datatable-tbody > tr:last-child > td {
+  border-width: 0 0 0 1px;
+}
+.p-datatable.p-datatable-gridlines:has(.p-datatable-tbody):has(.p-datatable-tfoot) .p-datatable-tbody > tr:last-child > td:last-child {
+  border-width: 0 1px 0 1px;
+}
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr.p-row-odd {
+  /* background: #ffffff; */
+  background:inherit;
+}
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr.p-row-odd.p-highlight {
+  background: #145388;
+  /* color: #ffffff; */
+  color:inherit;
+}
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr.p-row-odd.p-highlight .p-row-toggler {
+  /* color: #ffffff; */
+  color:inherit;
+}
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr.p-row-odd.p-highlight .p-row-toggler:hover {
+  /* color: #ffffff; */
+  color:inherit;
+}
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr.p-row-odd + .p-row-expanded {
+  /* background: #ffffff; */
+  background:inherit;
+}
+.p-datatable.p-datatable-sm .p-datatable-header {
+  padding: 0.5rem 0.5rem;
+}
+.p-datatable.p-datatable-sm .p-datatable-thead > tr > th {
+  padding: 0.5rem 0.5rem;
+}
+.p-datatable.p-datatable-sm .p-datatable-tbody > tr > td {
+  padding: 0.5rem 0.5rem;
+}
+.p-datatable.p-datatable-sm .p-datatable-tfoot > tr > td {
+  padding: 0.5rem 0.5rem;
+}
+.p-datatable.p-datatable-sm .p-datatable-footer {
+  padding: 0.5rem 0.5rem;
+}
+.p-datatable.p-datatable-lg .p-datatable-header {
+  padding: 1.25rem 1.25rem;
+}
+.p-datatable.p-datatable-lg .p-datatable-thead > tr > th {
+  padding: 1.25rem 1.25rem;
+}
+.p-datatable.p-datatable-lg .p-datatable-tbody > tr > td {
+  padding: 1.25rem 1.25rem;
+}
+.p-datatable.p-datatable-lg .p-datatable-tfoot > tr > td {
+  padding: 1.25rem 1.25rem;
+}
+.p-datatable.p-datatable-lg .p-datatable-footer {
+  padding: 1.25rem 1.25rem;
+}
+.p-datatable-drag-selection-helper {
+  background: rgba(33, 150, 243, 0.16);
+}
+/* dataTable css @end */
+
+
+/*paginator @start */
+.p-paginator {
+  background-color: var(--bg-color);
+  color: #6c757d;
+  border-width: 0;
+  padding: 0.5rem 1rem;
+  border: #313131;    
+  border-width: 0 0 1px 0;
+  border-radius: 50%;
+}
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
+  background-color: transparent;
+  border: 0 none;
+  color: #6c757d;
+  min-width: 2.357rem;
+  height: 2.357rem;
+  margin: 0.143rem;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border-radius: 3px;
+}
+.p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover,
+.p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover,
+.p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover,
+.p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
+  background: #e9ecef;
+  border-color: transparent;
+  color: #6c757d;
+}
+.p-paginator .p-paginator-first {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.p-paginator .p-paginator-last {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.p-paginator .p-dropdown {
+  margin-left: 0.5rem;
+  height: 2.357rem;
+}
+.p-paginator .p-dropdown .p-dropdown-label {
+  padding-right: 0;
+}
+.p-paginator .p-paginator-page-input {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.p-paginator .p-paginator-page-input .p-inputtext {
+  max-width: 2.357rem;
+}
+.p-paginator .p-paginator-current {
+  background-color: transparent;
+  border: 0 none;
+  color: #6c757d;
+  min-width: 2.357rem;
+  height: 2.357rem;
+  margin: 0.143rem;
+  padding: 0 0.5rem;
+}
+.p-paginator .p-paginator-pages .p-paginator-page {
+  background-color: transparent;
+  border: 0 none;
+  color: #6c757d;
+  min-width: 2.357rem;
+  height: 2.357rem;
+  margin: 0.143rem;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border-radius: 50%;
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: #145388;
+  border-color: #145388;
+  color: #ffffff;
+}
+.p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
+  background: #e9ecef;
+  border-color: transparent;
+  color: #6c757d;
+}
+
+.p-dropdown {
+  background: var(--bg-color) !important;
+  border: 1px solid var(--bg-tbl-header);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border-radius: 20px;
+  outline-color: transparent;
+  padding-block: 0.4rem;
+  /* min-width: 13rem; */
+}
+
+    /* dropdown css @start */
+    .p-dropdown {
+      display: inline-flex;
+      cursor: pointer;
+      position: relative;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+              user-select: none;
+              padding-left: .5rem;
+              align-items: center;           
+    }
+    .p-dropdown-clear-icon {
+      position: absolute;
+      top: 50%;
+      margin-top: -0.5rem;
+    }
+    .p-dropdown-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .p-dropdown-label {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      flex: 1 1 auto;
+      width: 1%;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+    .p-dropdown-label-empty {
+      overflow: hidden;
+      opacity: 0;
+    }
+    input.p-dropdown-label {
+      cursor: default;
+    }
+    .p-dropdown .p-dropdown-panel {
+      min-width: 100%;
+    }
+    .p-dropdown-panel {
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 0 0 0.1rem #f3f3f3;
+    }
+    .p-dropdown-items-wrapper {
+      overflow: auto;
+    }
+    .p-dropdown-item {
+      cursor: pointer;
+      font-weight: normal;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+      background-color: red;
+      display: flex;
+      align-items: center;
+    }
+    .p-dropdown-item-group {
+      cursor: auto;
+    }
+    .p-dropdown-items {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    .p-dropdown-filter {
+      width: 100%;
+    }
+    .p-dropdown-filter-container {
+      position: relative;
+    }
+    .p-dropdown-filter-icon {
+      position: absolute;
+      top: 50%;
+      margin-top: -0.5rem;
+    }
+    .p-fluid .p-dropdown {
+      display: flex;
+    }
+    .p-fluid .p-dropdown .p-dropdown-label {
+      width: 1%;
+    }
+
+    .p-dropdown:not(.p-disabled):hover {
+      border-color:var(--bg-tbl-header);
+    }
+    .p-dropdown:not(.p-disabled).p-focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: 0 0 0 0.2rem var(--bg-tbl-header);
+      border: 1px solid var(--boder-color);
+    }
+    .p-dropdown.p-variant-filled {
+      background: #f8f9fa;
+    }
+    .p-dropdown.p-variant-filled:not(.p-disabled):hover {
+      background-color: #f8f9fa;
+    }
+    .p-dropdown.p-variant-filled:not(.p-disabled).p-focus {
+      background-color: #f8f9fa;
+    }
+    .p-dropdown.p-variant-filled:not(.p-disabled).p-focus .p-inputtext {
+      background-color: transparent;
+    }
+    .p-dropdown.p-dropdown-clearable .p-dropdown-label {
+      padding-right: 1.5rem;
+    }
+    .p-dropdown .p-dropdown-label {
+      background: transparent;
+      border: 0 none;
+    }
+    .p-dropdown .p-dropdown-label.p-placeholder {
+      color: #6c757d;
+    }
+    .p-dropdown .p-dropdown-label:focus, .p-dropdown .p-dropdown-label:enabled:focus {
+      outline: 0 none;
+      box-shadow: none;
+    }
+    .p-dropdown .p-dropdown-trigger {
+      background: transparent;
+      color: #495057;
+      width: 2.357rem;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    .p-dropdown .p-dropdown-clear-icon {
+      color: #495057;
+      right: 2.357rem;
+    }
+    .p-dropdown.p-invalid.p-component {
+      border-color: #ced4da #ced4da #ced4da #e4677e;
+    }
+    .p-dropdown-panel {
+     
+      background: white;
+      border: 0 none;
+      border-radius: 5px;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    }
+    .p-dropdown-panel .p-dropdown-header {
+      padding: 0.5rem 1rem;
+      border-bottom: 0 none;
+      color: var(--text-color);
+      background: var(--bg-color);
+      margin: 0;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+  }
+    .p-dropdown-panel .p-dropdown-header .p-dropdown-filter {
+      padding-right: 1.5rem;
+      margin-right: -1.5rem;
+    }
+    .p-dropdown-panel .p-dropdown-header .p-dropdown-filter-icon {
+      right: 0.5rem;
+      color: #495057;
+    }
+    .p-dropdown-panel .p-dropdown-items {
+      padding: 0.5rem 0;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+      margin: 0;
+      padding: 0.5rem 1rem;
+      border: 0 none;
+      color: #495057;
+      background: white; 
+      /* arti */
+      transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+      border-radius: 0;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item:first-child {
+      margin-top: 0;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item:last-child {
+      margin-bottom: 0;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+      color: #ffffff;
+      background: #145388;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight.p-focus {
+      background: rgba(33, 150, 243, 0.24);
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled).p-focus {
+      color:white;
+      background: #145388;
+  }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item .p-dropdown-check-icon {
+      position: relative;
+      margin-left: -0.5rem;
+      margin-right: 0.5rem;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item-group {
+      margin: 0;
+      padding: 0.75rem 1rem;
+      color: #495057;
+      background: #ffffff;
+      font-weight: 600;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-empty-message {
+      padding: 0.5rem 1rem;
+      color: white;
+      background: #145388;
+    }
+    /* dropdown css @end */
+
+/*paginator @end */
+
+
+
+
+
+
+
+
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.1rem #f3f3f3;
+}

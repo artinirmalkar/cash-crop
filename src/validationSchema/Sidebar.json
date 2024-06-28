@@ -1,0 +1,194 @@
+[
+  {
+    "icon": "SlNotebook",
+    "title": "Order",
+    "path": "order/create-order",
+    "submenu": [
+      {
+        "icon": "IoMdCart",
+        "title": "Create Order",
+        "path": "order/create-order"
+      }
+    ],
+    "accordian": [
+      {
+        "accordianTitle": "Running Order",
+        "accordianmenu": [
+          {
+            "title": "Past Order",
+            "path": "order/past-orders",
+            "icon": "MdContentPaste"
+          },
+          {
+            "title": "Today Order",
+            "path": "order/today-orders",
+            "icon": "MdToday"
+          },
+          {
+            "title": "Tommorrow Order",
+            "path": "order/tommorrow-orders",
+            "icon": "GiSandsOfTime"
+          },
+          {
+            "title": "Schedule Order",
+            "path": "order/schedule-orders",
+            "icon": "BiTimer"
+          },
+          {
+            "title": "Dispatch",
+            "path": "order/dispatch",
+            "icon": "BsCartCheckFill"
+          },
+          {
+            "title": "Table Booking",
+            "path": "order/table-booking",
+            "icon": "MdOutlineTableBar"
+          }
+        ]
+      },
+      {
+        "accordianTitle": "History",
+        "accordianmenu": [
+          {
+            "title": "Current Week",
+            "path": "history/current-week",
+            "icon": "SlCalender"
+          },
+          {
+            "title": "Current Month",
+            "path": "history/current-month",
+            "icon": "VscCalendar"
+          },
+          {
+            "title": "History",
+            "path": "history/history-list",
+            "icon": "RiFolderHistoryFill"
+          },
+          {
+            "title": "Reviews",
+            "path": "history/reviews",
+            "icon": "CiStar"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "icon": "GiCoins",
+    "title": "Earning",
+    "path": "earning/earnings",
+    "submenu": [
+      {
+        "icon": "SlCalender",
+        "title": "Current Week",
+        "path": "earning/current-week"
+      },
+      {
+        "icon": "VscCalendar",
+        "title": "Current Month",
+        "path": "earning/current-month"
+      },
+      {
+        "icon": "AiOutlineProduct",
+        "title": "Earning",
+        "path": "earning/earnings"
+      }
+    ],
+    "accordian": []
+  },
+  {
+    "icon": "SlNotebook",
+    "title": "Menu",
+    "path": "menu/item-list",
+    "submenu": [],
+    "accordian": [
+      {
+        "accordianTitle": "Menu",
+        "accordianmenu": [
+          {
+            "icon": "CgNotes",
+            "title": "Item",
+            "path": "menu/item-list"
+          },
+          {
+            "icon": "FaSitemap",
+            "title": "Category",
+            "path": "menu/category"
+          }
+        ]
+      },
+      {
+        "accordianTitle": "Modifier",
+        "accordianmenu": [
+          {
+            "icon":"SiModin",
+            "title": "Modifier Category",
+            "path": "menu/modifier-group"
+          },
+          {
+            "icon":"MdImportExport",
+            "title": "Import Export",
+            "path": "menu/import-data"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "icon": "ImUsers",
+    "title": "Users",
+    "path": "users/sub-stores",
+    "submenu": [
+      {
+        "icon": "FaStore",
+        "title": "Sub Stores",
+        "path": "users/sub-stores"
+      }
+    ],
+    "accordian": []
+  },
+  {
+    "icon": "AiOutlineTag",
+    "title": "Offers",
+    "path": "offers"
+  },
+  {
+    "icon": "CiSettings",
+    "title": "Settings",
+    "path": "settings/store-settings",
+    "submenu": [
+      {
+        "icon": "CiSettings",
+        "title": "Store Settings",
+        "path": "settings/store-settings"
+      },
+      {
+        "icon": "MdOutlineDeliveryDining",
+        "title": "Delivery Settings",
+        "path": "settings/delivery-settings"
+      },
+      {
+        "icon": "TfiAlarmClock",
+        "title": "Store Time Settings",
+        "path": "settings/store-time-settings"
+      }
+    ],
+    "accordian": [
+      {
+        "accordianTitle": "Table Booking",
+        "accordianmenu": [
+          {
+            "icon":"VscSettings",
+            "title": "Basic Settings",
+            "path": "settings/table-booking-basic-settings"
+          },
+          {
+            "icon":"TbSettingsX",
+            "title": "Cancellation Policy",
+            "path": "settings/table-booking-cancellation-policy"
+          }
+        ]
+      }
+    ]
+  }
+]
